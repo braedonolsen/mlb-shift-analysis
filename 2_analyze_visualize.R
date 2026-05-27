@@ -50,6 +50,26 @@ avg_by_year <- mlb_qual |>
     y = "Mean AVG"
   )
 
+# GB BABIP increased slightly, but overall contact remained steady
+# are hitters hitting ground balls at similar rates to before the shift was banned?
+mlb_qual |> 
+  filter(pa >= 300) |> 
+  summarize(
+    avg_gb_pct = mean(groundballs_percent),
+    avg_ld_pct = mean(linedrives_percent),
+    avg_fb_pct = mean(flyballs_percent),
+    .by = year
+  )
+# ground ball rate has actually decreased; fly ball rate has increased
+
+
+
+
+
+## Save out plots ----
+ggsave(filename = "plots/gb_babip_by_year.png", plot = gb_babip_by_year)
+ggsave(filename = "plots/avg_by_year.png", plot = avg_by_year)
+
 
 
 
