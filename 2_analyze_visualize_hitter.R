@@ -18,6 +18,7 @@ mlb_qual |>
     .by = year
   )
 
+## Visualize some of the trends ----
 gb_babip_by_year <- mlb_qual |> 
   filter(pa >= 300) |> 
   summarize(
