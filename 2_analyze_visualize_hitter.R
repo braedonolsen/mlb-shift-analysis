@@ -1,4 +1,4 @@
-# Analyze and Visualize Data to find insightful conclusions ----
+# Analyze and Visualize Hitter Data to find insightful conclusions ----
 
 ## Load packages and data ----
 library(tidyverse)
